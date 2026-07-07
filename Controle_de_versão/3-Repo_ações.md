@@ -2,18 +2,22 @@
 ![Git](https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ## Tópicos
-- 1. [Introdução](#1-introducao)
+- 1. [Introdução](1-Introdução.md)
     - 1.1 Instrutor
     - 1.2 História
     - 1.3 Interfaces Gráficas
-- 2. [Gerenciar Arquivos](#2-gerenciar-arquivos)
-# 3. [Repositórios e Ações](3#-repo-acoes)
+- 2. [Gerenciar Arquivos](2-Gerenciar_arquivos.md)
+# 3. [Repositórios e Ações](3-Repo_ações.md)
 - 3.1 Commits
 - 3.2 Branches
 - 3.3 Diffs
 - 3.4 Merges
 - 3.5 Patches
 - 3.6 Gerrit
+***
+
+<br>
+<br>
 
 # 3. REPOSITÓRIOS E AÇÕES
 
@@ -38,7 +42,7 @@ para exibir os patches (mudanças exatas) feitos em cada arquivo. Para identific
 
 ***Revertendo Alterações***
 
-Existem duas formas principais de desfazer erros: git revert (mudança inversa de um commit anterior, não apaga o histórico) e git reset (Move a branch para um estado anterior. Pode ser **--soft** (mantém arquivos e index), **--mixed** (limpa o index) ou **--hard** (apaga todas as mudanças locais nos arquivos)).
+Existem duas formas principais de desfazer erros: **git revert** (mudança inversa de um commit anterior, não apaga o histórico) e **git reset** (Move a branch para um estado anterior. Pode ser **--soft** (mantém arquivos e index), **--mixed** (limpa o index) ou **--hard** (apaga todas as mudanças locais nos arquivos)).
 
 <br>
 
@@ -54,8 +58,6 @@ O ***git bisect*** é uma ferramenta de busca binária para encontrar qual commi
 ## 3.2 Branches
 
 Uma branch permite trabalhar de forma independente a partir de um ponto original. Isso é essencial para manter uma versão estável enquanto se criam novas funcionalidades, ou para isolar o conserto de um bug crítico sem a interferência de outras mudanças simultâneas.
-
-Embora usem nomes amigáveis, branches e tags têm funções distintas: a primeira representa uma linha viva de desenvolvimento que evolui a cada novo commit. Já a segunda é um marcador imutável. Enquanto a branch avança, a tag permanece fixada naquele hash original.
 
 ### Criando e Excluindo Ramos
 
@@ -120,7 +122,7 @@ Independentemente da escolha entre merge ou rebase, a recomendação é manter o
 ***
 <br>
 
-### Repositórios "Bare" (Nus)
+### Repositórios Bare
 
 Para servir como um ponto de sincronização central, utiliza-se um repositório **bare**. Ele é criado com a opção *--bare* e não possui diretórios de trabalho. Sua única função é armazenar os objetos do Git para que as pessoas possam fazer *push* e *pull*.
 
